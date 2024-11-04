@@ -1,16 +1,25 @@
 import cv2
-print(cv2.__version__)
-width=1280
-height=720
-cam=cv2.VideoCapture(1,cv2.CAP_DSHOW)
-cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
-cam.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
-cam.set(cv2.CAP_PROP_FPS, 30)
-cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
+import numpy as np 
+
+x = np.zeros([256,640,3], dtype=np.uint8)
+for row in range(0,256,1):
+    for column in range(0,640,1):
+        x [row,column] = (int(column/4),row,255)
+x = cv2.cvtColor(x,cv2.COLOR_HSV2BGR)
+
+
+y = np.zeros([256,640,3], dtype=np.uint8)
+for row in range(0,256,1):
+    for column in range(0,640,1):
+        x [row,column] = (int(column/4),255,row)
+y = cv2.cvtColor(x,cv2.COLOR_HSV2BGR)
+
 while True:
-    ignore,  frame = cam.read()
-    cv2.imshow('my WEBcam', frame)
-    cv2.moveWindow('my WEBcam',0,0)
-    if cv2.waitKey(1) & 0xff ==ord('q'):
-        break
-cam.release()
+    cv2.imshow('my HSV', x)
+    cv2.moveWindow('my HSV', 0,0)
+
+    cv2.imshow('my HSV2', y)
+    cv2.moveWindow('my HSV2', 0,row + 60)
+    if cv2.waitKey(1) & 0xff == ord('q'):
+        break;
+cv2.destroyAllWindows();
