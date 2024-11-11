@@ -1,76 +1,57 @@
-# import cv2
-# print(cv2.__version__);
+import cv2  # Import OpenCV for image handling
+print(cv2.__version__)  # Display OpenCV version
 
-# square_size = 100;
-# board_size = 1000;
-# import numpy as np
-# while True:
-#     frame = np.zeros([1000,1000,3],dtype=np.uint8)
-#     # frame[:,:] = (0,0,255);
-#     # frame[:,:125] = (0,255,0);
-#     # frame[:125,:0] = (255, 0,0);
+import numpy as np  # Import NumPy for creating the checkerboard array
 
-#     # frame[:100,:] = (0,0,0);
-#     # frame[100:200,:] = (255,255,255);
-#     # frame[200:300,:] = (0,0,0);
-#     # frame[300:400,:] = (255,255,255);
-#     # frame[400:500,:] = (0,0,0);
-#     # frame[500:600,:] = (255,255,255);    
-#     # frame[600:700,:] = (0,0,0);
-#     # frame[700:800,:] = (255,255,255);
-#     # frame[800:900,:] = (0,0,0);
-#     # frame[900:1000,:] = (255,255,255);
+# Prompt the user for the board size and the number of squares
+board_size = int(input("What size is your board, Yan Naing? "))  # Total board dimension
+numSquare = int(input("Yan Naing, how many squares do you want? "))  # Number of squares along one row/column
 
-#     # frame[:,:100] = (0,0,0);
-#     # frame[:,100:200] = (255,255,255);
-#     # frame[:,200:300] = (0,0,0);
-#     # frame[:,300:400] = (255,255,255);
+# Calculate the size of each square based on board size and number of squares
+square_size = int(board_size / numSquare)
 
-#     for row in range(0, 1000, 100):
-#         for col in range(0, 1000, 100):
-#             # Alternate colors based on the row and column indices
-#             if (row // 100 + col // 100) % 2 == 0:
-#                 color = (0, 0, 0)  # Black
-#             else:
-#                 color = (255, 255, 255)  # White
-            
-#             # Draw the square
-#             frame[row:row+1000, col:col+1000] = color
+# Define colors for the checkerboard: dark and light colors
+darkColor = (0, 0, 0)  # Black color in BGR format
+lightColor = (125, 125, 125)  # Light gray color in BGR format
+nowColor = darkColor  # Start with the dark color
 
-#     cv2.imshow("My Window", frame)
-#     if cv2.waitKey(1) & 0xff == ord('q'):
-#         break
-
-
-import cv2
-print(cv2.__version__);
-import numpy as np
-
-board_size = int(input("What size is you Board, Yan Naing?"));
-numSquare = int(input("Yan Naing, how many square do you want too?"));
-
-square_size = int(board_size/numSquare);
-
-darkColor = (0,0,0);
-ligthColor = (125,125,125);
-nowColor = darkColor
-
-
+# Infinite loop to generate and display the checkerboard
 while True:
-    x = np.zeros([board_size,board_size, 3], dtype=np.uint8);
+    # Create a blank board (image) with 3 color channels, initialized to black
+    x = np.zeros([board_size, board_size, 3], dtype=np.uint8)
 
-    for row in range(0,numSquare):
-        for col in range(0,numSquare):
-            x[square_size*row:square_size*(row+1), square_size*col:square_size
-            *(col+1)] = nowColor;
+    # Loop through rows and columns to fill in each square
+    for row in range(0, numSquare):
+        for col in range(0, numSquare):
+            # Set each square in the checkerboard pattern
+            x[square_size * row:square_size * (row + 1), square_size * col:square_size * (col + 1)] = nowColor
+            
+            # Alternate the color for each square in the row
             if nowColor == darkColor:
-                nowColor = ligthColor;
+                nowColor = lightColor
             else:
-                nowColor = darkColor;
+                nowColor = darkColor
+
+        # Alternate the starting color of each new row for a checkerboard effect
         if nowColor == darkColor:
-            nowColor = ligthColor;
+            nowColor = lightColor
         else:
-            nowColor = darkColor;
-    cv2.imshow("My CheckerBox ", x)
+            nowColor = darkColor
+
+    # Display the checkerboard in a window titled "My CheckerBox"
+    cv2.imshow("My CheckerBox", x)
+
+    # Exit the loop if 'q' is pressed
     if cv2.waitKey(1) == ord("q"):
         break
+
+
+# Explanation Summary
+# This code creates a dynamic checkerboard pattern where the board size and the number of squares are user-defined.
+# Each square alternates between a dark color (black) and a light color (gray) to form the checkerboard pattern, with each row reversing the starting color for the alternating effect.
+# The checkerboard updates continuously in a window until 'q' is pressed to exit.
+
+
+
+
+
