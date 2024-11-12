@@ -79,3 +79,10 @@ cam.release()
 
 # Release the camera when done to free up resources
 # cam.release();
+
+
+# Explanation Summary
+# The main code opens the camera and displays video in different color spaces:
+# First, in the HLS_FULL color space, with an option to exit by pressing "q."
+# The second section (homework) demonstrates converting the live video feed into grayscale, HLS, and LAB color spaces.
+# Windows are created for each color space and moved to specific screen coordinates for organization.

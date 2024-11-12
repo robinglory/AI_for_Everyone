@@ -32,3 +32,14 @@ while True:
 
 # Release the camera resource when the loop ends
 cam.release()
+
+# Explanation Summary
+# The code opens a webcam feed, setting the frame width, height, and FPS.
+# The MJPG codec is set for compression.
+# It displays the webcam feed in a window positioned at (0, 0).
+# The program continues displaying frames until the user presses the 'q' key, at which point it exits.
+
+
+
+
+

@@ -40,3 +40,8 @@ while True:
 
 # Release the camera resource when the loop ends
 cam.release()
+
+# Explanation Summary
+# This code captures video from the webcam and creates a matrix of video feed windows based on user-specified rows and columns.
+# Each frame is resized to fit within each cell of the matrix, and windows are moved to their appropriate positions on the screen to form a grid.
+# The program continues displaying video frames in real-time until the user presses 'q' to exit.

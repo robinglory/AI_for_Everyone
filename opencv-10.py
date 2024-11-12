@@ -16,7 +16,7 @@ boxCC = int(width / 2)   # box center column (horizontal center)
 
 # Movement increments for the snip (this controls how fast it moves)
 deltaRow = 1  # Row movement step
-delataColumn = 1  # Column movement step
+deltaColumn = 1  # Column movement step
 
 # Initialize the video capture from the default camera, using DirectShow for Windows compatibility
 cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
@@ -29,10 +29,15 @@ while True:
     # Capture a frame from the webcam
     ignore, frame = cam.read()
 
-    # Define the region of interest (ROI) (the snip) based on the center and dimensions
-    frameROI = frame[int(boxCR - snipheight / 2): int(boxCR + snipheight / 2), 
-                     int(boxCC - snipwidth / 2): int(boxCC + snipwidth / 2)]
+    # Calculate the top-left and bottom-right coordinates of the snip
+    top_left_row = max(0, int(boxCR - snipheight / 2))
+    bottom_right_row = min(height, int(boxCR + snipheight / 2))
+    top_left_col = max(0, int(boxCC - snipwidth / 2))
+    bottom_right_col = min(width, int(boxCC + snipwidth / 2))
     
+    # Define the region of interest (ROI) (the snip) based on the center and dimensions
+    frameROI = frame[top_left_row:bottom_right_row, top_left_col:bottom_right_col]
+
     # Convert the entire frame to grayscale
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
@@ -40,29 +45,29 @@ while True:
     frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2BGR)
     
     # Place the original color snip back onto the frame
-    frame[int(boxCR - snipheight / 2): int(boxCR + snipheight / 2), 
-          int(boxCC - snipwidth / 2): int(boxCC + snipwidth / 2)] = frameROI
+    frame[top_left_row:bottom_right_row, top_left_col:bottom_right_col] = frameROI
 
     # Draw a green rectangle border around the snip to highlight it
     cv2.rectangle(frame, 
-                  (int(boxCC - snipwidth / 2), int(boxCR - snipheight / 2)), 
-                  (int(boxCC + snipwidth / 2), int(boxCR + snipheight / 2)), 
+                  (top_left_col, top_left_row), 
+                  (bottom_right_col, bottom_right_row), 
                   (0, 255, 0), 2)  # Green border with a thickness of 2
 
     # Animation logic to move the snip within the frame
     # Reverse direction if snip reaches the boundaries of the frame
     if boxCR - snipheight / 2 <= 0 or boxCR + snipheight / 2 >= height:
-        deltaRow = deltaRow * (-2)  # Reverse vertical direction
+        deltaRow = -deltaRow  # Reverse vertical direction
     if boxCC - snipwidth / 2 <= 0 or boxCC + snipwidth / 2 >= width:
-        delataColumn = delataColumn * (-2)  # Reverse horizontal direction
-        
+        deltaColumn = -deltaColumn  # Reverse horizontal direction
+
     # Update the position of the snip based on the movement increments
     boxCR = boxCR + deltaRow
-    boxCC = boxCC + delataColumn
+    boxCC = boxCC + deltaColumn
 
     # Show the region of interest (snip) in a separate window
-    cv2.imshow("My ROI", frameROI)
-    cv2.moveWindow("My ROI", width, 0)  # Move the window to a different position
+    if frameROI.size > 0:  # Only show if ROI has valid content
+        cv2.imshow("My ROI", frameROI)
+        cv2.moveWindow("My ROI", width, 0)  # Move the window to a different position
 
     # Show the modified frame with the moving snip
     cv2.imshow('my WEBcam', frame)
@@ -74,6 +79,7 @@ while True:
 
 # Release the camera and close all OpenCV windows
 cam.release()
+
 
 
 # Explanation of Key Parts:
