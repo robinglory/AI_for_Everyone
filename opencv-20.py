@@ -49,8 +49,11 @@ def onTrack8(val):
     print('High Hue2: ',val)
  
  
-width=960
-height=540
+width=320
+height=240
+
+Xpos = 0 
+Ypos = 0
 cam=cv2.VideoCapture(0)
 cam.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG')) 
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
@@ -98,6 +101,14 @@ while True:
             x,y,w,h = cv2.boundingRect(contour)
             cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),3)
 
+            #homework edition
+            Xpos = x
+            Ypos = y
+
+            Xpos = int(Xpos/width * 1920)
+            Ypos = int(Ypos/height * 1080)
+
+
     #myMask=cv2.bitwise_not(myMask)
     myMaskSmall=cv2.resize(myMask,(int(width/2),int(height/2)))
     mySelection=cv2.bitwise_and(frame,frame, mask=myMask)
@@ -108,7 +119,8 @@ while True:
     cv2.imshow('My Mask', myMaskSmall)
     cv2.moveWindow('My Mask',0,height)
     cv2.imshow('my WEBcam',frame)
-    cv2.moveWindow('my WEBcam',0,0)
+    # cv2.moveWindow('my WEBcam',0,0)
+    cv2.moveWindow("my WEBcam",Xpos,Ypos)
     if cv2.waitKey(1) & 0xff ==ord('q'):
         break
 cam.release()
