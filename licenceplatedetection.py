@@ -2,7 +2,7 @@ import cv2
 import time
 
 # Initialize webcam
-width, height = 640, 360
+width, height = 1280, 1080
 cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
@@ -29,7 +29,11 @@ while True:
         # You can extract and process the plate region if needed:
         plateROI = frame[y:y+h, x:x+w]
         # Optionally save the detected plate as an image
-        cv2.imwrite("detected_plate.jpg", plateROI)
+        # Use a timestamp to generate a unique filename
+        timestamp = time.strftime("%Y%m%d-%H%M%S")
+        filename = f"detected_plate_{timestamp}.jpg"
+        cv2.imwrite(filename, plateROI)
+
 
     # Display FPS
     loopTime = time.time() - timeStamp
