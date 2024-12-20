@@ -1,5 +1,11 @@
 import cv2
+import os
 import time
+
+# Ensure output folder exists
+output_folder = "LicencePlateDatabasePhotos"
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
 
 # Initialize webcam
 width, height = 1280, 1080
@@ -21,19 +27,20 @@ while True:
     frameGray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # License plate detection
-    plates = plateCascade.detectMultiScale(frameGray, 1.3, 5)
+    # Adjust parameters for higher accuracy (scaleFactor and minNeighbors)
+    plates = plateCascade.detectMultiScale(frameGray, scaleFactor=1.1, minNeighbors=10, minSize=(50, 50))
     for plate in plates:
         x, y, w, h = plate
         # Draw a rectangle around the license plate
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 3)
-        # You can extract and process the plate region if needed:
+        
+        # Extract the plate region
         plateROI = frame[y:y+h, x:x+w]
-        # Optionally save the detected plate as an image
-        # Use a timestamp to generate a unique filename
+        
+        # Save the detected plate image
         timestamp = time.strftime("%Y%m%d-%H%M%S")
-        filename = f"detected_plate_{timestamp}.jpg"
+        filename = os.path.join(output_folder, f"detected_plate_{timestamp}.jpg")
         cv2.imwrite(filename, plateROI)
-
 
     # Display FPS
     loopTime = time.time() - timeStamp
