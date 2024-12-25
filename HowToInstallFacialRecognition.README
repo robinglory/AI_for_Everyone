@@ -1,0 +1,99 @@
+# Face Recognition Setup Guide for Python
+
+This guide provides step-by-step instructions to install the `face_recognition` library along with its dependencies, including `dlib`, in a Python virtual environment on Windows.
+
+## Prerequisites
+
+- **Python Version**: Ensure you have Python 3.11 installed. Other versions may require different wheel files.
+- **pip**: Ensure `pip` is installed and updated.
+- **CMake**: Required for building `dlib`. Install it from [CMake.org](https://cmake.org/download/) and ensure it's added to your system PATH.
+
+---
+
+## Installation Steps
+
+### 1. Set Up a Virtual Environment
+1. Open a terminal or PowerShell.
+2. Navigate to your desired project directory:
+   ```bash
+   cd C:\path\to\your\project
+   ```
+3. Create and activate a virtual environment:
+   ```bash
+   python -m venv pyAI3.11
+   pyAI3.11\Scripts\activate
+   ```
+
+### 2. Download Precompiled `dlib` Wheel
+1. Download the appropriate `dlib` wheel file for your Python version and architecture from [PyPI unofficial site](https://www.lfd.uci.edu/~gohlke/pythonlibs/).
+   - For Python 3.11 (64-bit), use: `dlib-19.24.1-cp311-cp311-win_amd64.whl`.
+2. Save the wheel file to a directory you can easily access, e.g., `C:\Users\ASUS\Documents\Python`.
+
+### 3. Install `dlib`
+1. Inside the activated virtual environment, install `dlib`:
+   ```bash
+   pip install "C:\Users\ASUS\Documents\Python\dlib-19.24.1-cp311-cp311-win_amd64.whl"
+   ```
+
+### 4. Install `face_recognition`
+1. Install the `face_recognition` library and its dependencies:
+   ```bash
+   pip install face_recognition
+   ```
+
+### 5. Verify Installation
+1. List installed packages to confirm:
+   ```bash
+   pip list
+   ```
+   Expected output:
+   ```
+   Package                 Version
+   ----------------------- -------
+   click                   8.1.8
+   cmake                   3.21.3
+   colorama                0.4.6
+   dlib                    19.24.1
+   face-recognition        1.3.0
+   face_recognition_models 0.3.0
+   numpy                   2.2.1
+   pillow                  11.0.0
+   pip                     24.2
+   setuptools              65.5.0
+   ```
+
+### 6. Test the Installation
+1. Create a test script (`test_face_recognition.py`):
+   ```python
+   import face_recognition
+
+   print("face_recognition library installed successfully!")
+   ```
+2. Run the script:
+   ```bash
+   python test_face_recognition.py
+   ```
+
+---
+
+## Troubleshooting
+
+### Error: "CMake is not installed"
+- Install CMake from [CMake.org](https://cmake.org/download/) and ensure it is added to your system PATH.
+
+### Error: "Wheel is not supported on this platform"
+- Ensure you downloaded the correct `dlib` wheel file for your Python version and architecture.
+
+### Error: "ModuleNotFoundError: No module named 'face_recognition'"
+- Ensure you are running the script within the virtual environment where the library is installed.
+
+---
+
+## Additional Notes
+- Always use a virtual environment to isolate project dependencies.
+- Update `pip` to the latest version to avoid compatibility issues:
+  ```bash
+  python -m pip install --upgrade pip
+  ```
+
+---
