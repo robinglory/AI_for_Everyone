@@ -15,16 +15,16 @@ yanFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImage
 faceLoc = FR.face_locations(yanFace)[0]
 yanFaceEncode = FR.face_encodings(yanFace)[0]
 
-waiFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\waiyan.jpg")
-faceLoc = FR.face_locations(waiFace)[0]
-waiFaceEncode = FR.face_encodings(waiFace)[0]
+NiFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\Mom.jpg")
+faceLoc = FR.face_locations(NiFace)[0]
+NiFaceEncode = FR.face_encodings(NiFace)[0]
 
-tokeFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\toke.jpg")
-faceLoc = FR.face_locations(tokeFace)[0]
-tokeFaceEncode = FR.face_encodings(tokeFace)[0]
+GuFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\Gugu.jpg")
+faceLoc = FR.face_locations(GuFace)[0]
+GuFaceEncode = FR.face_encodings(GuFace)[0]
 
-knownEncodings = [yanFaceEncode, waiFaceEncode, tokeFaceEncode]
-names = ["Yan Naing", "Wai Yan", "Myo Min Ko"]
+knownEncodings = [yanFaceEncode, NiFaceEncode, GuFaceEncode]
+names = ["Yan Naing", "Ni Ni Lwin", "Gu Gu"]
 
 while True:
     ignore,  unknownFace = cam.read()
