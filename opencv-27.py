@@ -1,30 +1,22 @@
 import cv2
 import face_recognition as FR
+import pickle
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
-width=320
-height=180
+width=640
+height=360
 cam=cv2.VideoCapture(0,cv2.CAP_DSHOW)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 cam.set(cv2.CAP_PROP_FPS, 30)
 cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
 
-yanFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\yan.jpg")
-faceLoc = FR.face_locations(yanFace)[0]
-yanFaceEncode = FR.face_encodings(yanFace)[0]
+with open('train.pkl','rb') as f:   
+    names = pickle.load(f)
+    knownEncodings= pickle.load(f)
 
-NiFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\Mom.jpg")
-faceLoc = FR.face_locations(NiFace)[0]
-NiFaceEncode = FR.face_encodings(NiFace)[0]
 
-# GuFace = FR.load_image_file(r"C:\Users\ASUS\Documents\Python\Programs\demoImages\known\Gugu.jpg")
-# faceLoc = FR.face_locations(GuFace)[0]
-# GuFaceEncode = FR.face_encodings(GuFace)[0]
-
-knownEncodings = [yanFaceEncode, NiFaceEncode,]
-names = ["Yan Naing", "Ni Ni Lwin",]
 
 while True:
     ignore,  unknownFace = cam.read()
@@ -53,10 +45,3 @@ cam.release()
 cv2.destroyAllWindows()
 
 
-# while True:
-#     ignore,  frame = cam.read()
-#     cv2.imshow('my WEBcam', frame)
-#     cv2.moveWindow('my WEBcam',0,0)
-#     if cv2.waitKey(1) & 0xff ==ord('q'):
-#         break
-# cam.release()
