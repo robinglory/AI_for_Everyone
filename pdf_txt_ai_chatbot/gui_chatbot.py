@@ -50,7 +50,7 @@ def clear_chat():
     chat_display.delete("1.0", "end")
 
 # Load PDF text
-pdf_text = load_text(r"C:\Users\ASUS\Documents\Python\Programs\amecal_txt.txt")
+pdf_text = load_text(r"C:\Users\ASUS\Documents\Python\Programs\pdf_txt_ai_chatbot\amecal_txt.txt")
 
 # Create GUI Window
 ctk.set_appearance_mode("dark")  # Dark Mode
