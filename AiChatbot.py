@@ -1,7 +1,7 @@
 import google.generativeai as genai
 
 # Set up Gemini API key
-genai.configure(api_key="api-key here")
+genai.configure(api_key="AIzaSyDo01CBIaanACl5voE9NEm7CdjtFPp6P2c")
 
 # Load extracted text from file
 def load_text(file_path):
