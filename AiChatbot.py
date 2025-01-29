@@ -1,59 +1,7 @@
-# import openai
-
-# # Set your OpenAI API key here
-# openai.api_key = "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"
-
-# # Load extracted text from file
-# def load_text(file_path):
-#     try:
-#         with open(file_path, "r", encoding="utf-8") as file:
-#             return file.read()
-#     except FileNotFoundError:
-#         print("Error: Text file not found.")
-#         return ""
-
-# def get_gpt_response(query, context):
-#     prompt = f"Based on the following document:\n\n{context}\n\nAnswer the question: {query}"
-
-#     response = openai.ChatCompletion.create(
-#         model="gpt-3.5-turbo",  # Change to gpt-3.5-turbo for free API key support
-#         messages=[
-#             {"role": "system", "content": "You are a helpful assistant."},
-#             {"role": "user", "content": prompt}
-#         ],
-#         temperature=0.7,
-#         max_tokens=300
-#     )
-
-#     return response["choices"][0]["message"]["content"]  # Extract response
-# # Chatbot function
-# def chatbot():
-#     pdf_text = load_text(r"C:\Users\ASUS\Documents\Python\Programs\pdf_text.txt")
-
-#     if not pdf_text:
-#         print("No data available for chatbot.")
-#         return
-
-#     print("AI Chatbot is ready! Type 'exit' to quit.")
-
-#     while True:
-#         user_input = input("\nYou: ")
-
-#         if user_input.lower() == "exit":
-#             print("Goodbye!")
-#             break
-
-#         response = get_gpt_response(user_input, pdf_text)
-#         print(f"Chatbot: {response}")
-
-# # Run chatbot
-# chatbot()
-
-
 import google.generativeai as genai
 
 # Set up Gemini API key
-genai.configure(api_key="AIzaSyDo01CBIaanACl5voE9NEm7CdjtFPp6P2c")
+genai.configure(api_key="api-key here")
 
 # Load extracted text from file
 def load_text(file_path):

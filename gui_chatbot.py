@@ -3,7 +3,7 @@ import google.generativeai as genai
 from threading import Thread
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyDo01CBIaanACl5voE9NEm7CdjtFPp6P2c")
+genai.configure(api_key="api-key here")
 
 # Load extracted text from file
 def load_text(file_path):
