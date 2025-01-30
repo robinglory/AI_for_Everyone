@@ -25,7 +25,7 @@ def get_gemini_response(query, context):
 
 # Chatbot function
 def chatbot():
-    pdf_text = load_text(r"C:\Users\ASUS\Documents\Python\Programs\pdf_text.txt")
+    pdf_text = load_text(r"C:\Users\ASUS\Documents\Python\Programs\pdf_txt_ai_chatbot\scholarship.txt")
 
     if not pdf_text:
         print("No data available for chatbot.")
