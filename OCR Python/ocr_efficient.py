@@ -77,7 +77,7 @@ while True:
 
                         # Save the extracted text
                         with open(text_save_path, "a", encoding="utf-8") as file:
-                            file.write(extracted_text + "\n")
+                            file.write(f"Time Data Collected {timestamp} {extracted_text}" + "\n")
 
                     # Reset after processing
                     last_detected_word = ""
