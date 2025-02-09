@@ -1,3 +1,4 @@
+##NOT Working as expected
 import customtkinter as ctk
 import google.generativeai as genai
 import torch
