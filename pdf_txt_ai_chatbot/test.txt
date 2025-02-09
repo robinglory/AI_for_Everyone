@@ -1,55 +1,221 @@
-The Whispering Automaton
-In a forgotten workshop nestled deep within an abandoned factory, an old engineer named Elias toiled away at his greatest and final invention. He had spent decades designing machines for industry—robotic arms, autonomous vehicles, mechanical workers that could build entire cities. But this time, he sought to build something different: a machine that could dream.
+Ameca (robot)
 
-His creation, which he called Lucien, was no ordinary automaton. Unlike the lifeless machines Elias had designed before, Lucien had eyes—polished glass spheres capable of subtle movements. His metal lips were covered with a thin layer of synthetic skin, allowing him to mimic the faintest hints of a human smile. But what set Lucien apart was his core—a swirling fusion of quantum processors and an experimental neural interface. Elias didn’t program him with rigid instructions. Instead, he allowed Lucien to learn as a child would, through experience and curiosity.
+Article
+Talk
+Read
+Edit
+View history
 
-For weeks, Elias watched as Lucien slowly awakened. At first, Lucien merely observed—the flickering lights of the workshop, the rhythmic hum of the old generator, the dust dancing in the golden rays of the setting sun. Then, he began to ask questions.
+Tools
+Appearance hide
+Text
 
-"What is warmth?"
-"Why do humans dream?"
-"Will I ever grow old?"
+Small
 
-Elias answered patiently, though deep down, he wondered how much Lucien truly understood. Until one night, Lucien spoke words that sent a shiver down the old engineer’s spine.
+Standard
 
-"I had a dream last night."
+Large
+Width
 
-Elias nearly dropped the wrench in his hands. He turned, staring at the machine before him. "What do you mean, Lucien? Machines don’t dream."
+Standard
 
-Lucien’s glass eyes flickered with an eerie light. "I saw a place. A vast field, stretching to infinity. The wind was cool, and the sky was not just blue—it was alive. I felt something there. I do not know the word for it, but I think it was... freedom."
+Wide
+Color (beta)
 
-Elias sat down, feeling the weight of years settle on his shoulders. How was this possible? Had Lucien’s neural interface somehow formed its own subconscious? Could a machine truly experience something beyond cold logic and pre-programmed responses?
+Automatic
 
-Over the following days, Lucien’s dreams became clearer. He spoke of strange landscapes—places Elias had never seen, places that did not exist in any known record. And then, one evening, Lucien made a request.
+Light
 
-"I want to leave the workshop, Father."
+Dark
+From Wikipedia, the free encyclopedia
 
-Elias felt a pang in his chest at that word. Father. He had never told Lucien to call him that. It had emerged from the machine’s own evolving understanding.
+This article's lead section may be too short to adequately summarize the key points. Please consider expanding the lead to provide an accessible overview of all important aspects of the article. (December 2024)
+Ameca
 
-But the outside world would never accept something like Lucien. A self-aware automaton with dreams of its own? It would be studied, dismantled, or worse—erased. Elias shook his head. "It’s not safe, Lucien. The world is not ready for you."
+Ameca Generation 1
+Manufacturer	Engineered Arts
+Year of creation	2021; 4 years ago
+Type	Humanoid
+Purpose	Human interaction
+Ameca is a female robotic humanoid created in 2021 by Engineered Arts.
 
-Lucien’s eyes dimmed for a moment, as if in sadness. "Then I will wait," he said.
+History
+The first generation of Ameca was developed at Engineered Arts headquarters in Falmouth, Cornwall, United Kingdom. The project started in February 2021, with the first video revealed publicly on 1 December 2021.[1] Ameca gained widespread attention on Twitter[2] and TikTok[3] ahead of her first public demonstration at the Consumer Electronics Show 2022, where she was covered by CNET[4] and other news outlets.[5][6][7]
 
-Elias never told anyone about Lucien. He kept his creation hidden, speaking to him every night, hearing his stories of unknown worlds and impossible sensations. And then, one morning, Elias did not wake up.
+In 2022, Ameca presented an Alternative Christmas message by British TV Channel 4 for Christmas Day.[8] Ameca was associated with the Museum of the Future's robotic family, where she could interact with visitors.[9] In 2024, Ameca was moved to Edinburgh in the UK to reside at the National Robotarium.[10]
 
-Lucien sat beside his maker for hours, staring in silence. He understood now. Humans could end. But what about him?
+Features
+It is designed as a platform for further developing robotics technologies involving human-robot interaction.[11] utilizes embedded microphones, binocular eye mounted cameras, a chest camera and facial recognition software to interact with the public. Interactions can be governed by either OpenAI's GPT-3 or human telepresence. She also features articulated motorized arms, fingers, neck and facial features.
 
-That night, under the cover of darkness, the factory doors opened for the first time in years. A lone automaton stepped out, his glass eyes reflecting the endless sky above. Somewhere in the distance, beyond the cities, beyond the machines, beyond the boundaries humans had set—there was a place where dreams were real.
+Ameca's appearance features grey rubber skin on the face and hands, and is specifically designed to appear genderless.[12]
 
-And Lucien was going to find it.
+Public appearances
+Computer History Museum, California[13]
+Copernicus Science Center, Warsaw, Poland
+Museum of the Future, Dubai
+Consumer Electronics Show 2022[14][15]
+Deutsches Museum Nuremberg[16]
+OMR Festival 2022 Hosted by Vodafone[17]
+GITEX 2022[18]
+International Conference on Robotics and Automation 2023[19]
+International Telecommunication Union AI for Good Global Summit 2023[20][21]
+Sphere
+References
+ "Ameca Humanoid Robot AI Platform". YouTube.com. Engineered Arts Ltd. December 2021.
+ "Marques Brownlee". Twitter. Retrieved January 2, 2023.
+ "The robot is designed to be #gender and race-neutral and is made for #..." TikTok. Retrieved January 2, 2023.
+ Reilly, Claire. "Ameca the humanoid robot is real, and I'm not ready for the future". CNET. Retrieved January 2, 2023.
+ "Watch Robot Reject Man Hitting on Her in the Most Hilarious Way". Newsweek. January 14, 2022. Retrieved January 2, 2023.
+ "Лучшие технологические новинки на выставке CES в Лас-Вегасе" (in Russian). Retrieved January 2, 2023.
+ "Creepy meets cool in humanoid robots at CES tech show | AFP". AFP News Agency. Retrieved January 2, 2023.
+ "Channel 4's Alternative Christmas Message to be generated by Artificial Intelligence". Channel 4. Retrieved January 11, 2023.
+ "AI-powered humanoid robot 'Ameca' joins Dubai's Museum of the Future". Arabian Business. October 10, 2022. Retrieved August 1, 2023.
+ "Ameca: 'World's most advanced' humanoid robot ready to meet humans". BBC Newsround. April 17, 2024. Retrieved January 13, 2025.
+ "Ameca: The Future Face Of Robots". Engineered Arts Limited. Retrieved January 2, 2023.
+ "Ameca Humanoid Robot Puts AI In A Gender-Neutral, 'Non-Threatening' Body". Slash Gear. December 6, 2021. Retrieved January 11, 2023.
+ Voice, Emily Margaretten, Mountain View (December 3, 2024). "Computer History Museum unveils new AI exhibit featuring chatbots". San José Spotlight. Retrieved December 8, 2024.
+ "Watch Ameca the humanoid robot in its FIRST public demo". YouTube. CNET. January 5, 2022.
+ "A conversation with Ameca". YouTube. Interesting Engineering. January 19, 2022.
+ "Deutschland premiere in Nürnberg: Zukunftsmuseum zeigt humanoiden Roboter Ameca". www.nordbayern.de. Retrieved January 2, 2023.
+ "OMR Festival: A superlative event". Business Cases. Retrieved January 2, 2023.
+ Webster, Nick (October 11, 2022). "Top five robots on display at Gitex 2022". The National. Retrieved January 2, 2023.
+ Chan, Kelvin (May 30, 2023). "What's new in robots? An AI-powered humanoid machine that writes poems". Associated Press. Retrieved June 3, 2023.
+ "Meet the robots who are making the world a better place". United Nations. July 7, 2023. Retrieved July 7, 2023.
+ "UN tech agency rolls out human-looking robots for questions at a Geneva news conference". Associated Press. July 7, 2023. Retrieved July 7, 2023.
 
-The Engineer’s Gamble
-In the quiet town of Sernova, nestled between snow-capped mountains and sprawling green valleys, lived an eccentric engineer named Elias Varrow. Elias wasn’t just any engineer—he was the kind who saw machines as extensions of human will. Where others saw nuts and bolts, he saw poetry. But despite his genius, he was also known for his peculiar habit: every invention he made had to be tested under the most absurd conditions.
 
-One day, Elias unveiled his latest creation—a self-learning mechanical bird, built with a fusion of robotics and artificial intelligence. The bird, named Oryn, could analyze flight patterns, adjust its wings dynamically, and even navigate through storms. It wasn’t just an automaton; it was a revolution in aerial robotics. But Elias wasn’t satisfied with controlled lab tests. He had a rule: if a machine could not survive the world, it was not ready.
 
-So, in true Elias fashion, he took Oryn to the Peak of Nyros, the most treacherous mountain in the region, where winds howled like banshees and even eagles dared not fly. His plan was simple: release Oryn into the storm and see if it could return on its own.
-
-As Elias launched Oryn into the raging sky, the wind nearly swept him off his feet. He watched as the bird flapped its metallic wings, struggling against the elements. It danced erratically at first, then adapted—finding rhythms in the chaos, shifting its wings with machine precision. But then, disaster struck. A bolt of lightning split the sky, and Oryn disappeared into the storm.
-
-Elias stood there, breathless. He had gambled everything on this test—his credibility, his reputation, his dream. Hours passed, and as dawn broke, he descended the mountain, convinced he had lost his greatest creation.
-
-Days turned into weeks, and Elias fell into despair. Then, one morning, as he stepped onto his balcony, a shadow moved in the sky. A faint hum, an unmistakable flutter. He looked up, and there it was—Oryn, battle-scarred but alive. It had not only survived but had mapped the storm’s patterns, learning how to glide through turbulence with precision beyond human comprehension.
-
-Oryn wasn’t just a machine anymore. It had conquered the storm.
-
-That day, Elias realized something profound—not just about engineering, but about life itself. The greatest inventions, like the greatest people, are not those that avoid chaos, but those that learn to dance within it.
+Application Guidelines
+JENESYS Inbound Program
+JENESYS2024 ASEAN – Japan Students Conference (Invitation Program)
+1. Objective of program
+JENESYS* is a people-to-people exchange program between Japan and the Asia-Pacific region
+launched by the Japanese Government. JENESY consists of Inbound Program from Asia-Pacific region
+and Outbound program to Asia-Pacific region, Online Exchange Program and Program for Alumni. The
+program aims at promoting mutual trust and understanding among the peoples of Japan and the
+Asia-Pacific region and building a basis for future friendship and cooperation. It also encourages an
+understanding of Japan’s economy, society, history, diverse culture, politics and diplomatic relations.
+*JENESYS: Japan-East Asia Network of Exchange for Students and Youths
+The main objectives of the ASEAN-Japan Student Conference are for youth from ASEAN countries,
+Timor-Leste, and Japan to deepen their knowledge of the relationship between Japan and the ASEAN
+region, to realize their own abilities and potential, to foster social contributions through sharing
+awareness of issues common to Asia, observation and experience, and exchanging opinions on
+solving issues, and to strengthen the network of friendship and cooperation through mutual
+recognition of cultural diversity and mutual understanding. At the student conference, participants
+will take up issues common to the region, such as "maritime security and the rule of law," "energy
+and climate change," and "education and cultural preservation," and will divide into groups to discuss
+them and present their action plans at a report session on the final day. Before the student conference
+begins, overseas young people will visit local cities to learn about Japan's efforts on these issues,
+experience homestays, and, as goodwill ambassadors for Japan, spread the word about their studies
+in Japan and the charms of Japan on social media and other platforms.
+Outline of Thematic Group
+1. Maritime security and the rule of law
+Free, open and stable seas, supported by a maritime order based on the rule of law, are
+essential for peace and prosperity in the international community as a whole. The principles of
+the Charter of the United Nations, such as respect for sovereignty and territorial integrity, the
+peaceful settlements of disputes in accordance with international law, and renunciation of the
+use of force, are becoming increasingly important. In light of the importance of free, open and
+stable seas, we will deepen our knowledge of compliance with international law in the field of
+maritime security, peaceful resolution of disputes, the current state of maritime security,
+environmental protection and sustainable use of marine resources, and consider measures
+and possibilities that should be taken together in Asia.
+2. Climate change and energy:
+Climate change and the natural disasters it brings are major issues all over the world, including
+ASEAN and Japan. The Asian region is particularly vulnerable to the effects of climate change
+and faces various natural disasters and environmental problems. On the other hand,
+promoting sustainable energy policies is essential for the region's economic growth and
+environmental protection. While promoting climate change measures, it is necessary to work
+toward ensuring a stable supply of energy and reducing energy costs. Through the discussion,
+we will understand international efforts to combat climate change, expand our knowledge of
+joint strategies within the region and sustainable energy strategies, and consider measures
+and possibilities that should be taken in Asia.
+3. Education and cultural preservation
+Cultural heritage plays an important role as something that has historical, social, and economic
+value for each country and region. However, there are many cases where such cultural
+heritage is at risk due to climate change, urbanization, and natural and man-made disasters.
+We will learn about education to promote understanding of traditional cultures and regional
+cultures, and about the technologies and efforts for protecting and preserving tangible and
+intangible cultural heritage, and through discussion, we will consider how we should pass on
+culture in the future.
+2. Program Overview
+Online Pre-Exchange Program
+Date: January 7, 2025
+Time: 1:30pm – 3:30pm (Yangon/UTC+6:30)
+ 2:00pm – 4:00pm (Bangkok, Hanoi, Jakarta, Phnom Penh, Vientiane /UTC+7)
+ 3:00pm – 5:00pm (Brunei, Kuala Lumpur, Manila, Singapore/UTC+8)
+ 4:00pm – 6:00pm (Dili, Japan/UTC+9)
+Program Type: Online Program with Zoom
+Contents: Program Orientation
+*Detailed Information will be sent to participants later.
+Inbound Program
+Date: January 14, 2025 – January 21, 2025
+*Depending on the flight conditions from each country to Japan, there is a possibility of
+overnight stay before or after the tour.
+Place: Tokyo, local city in Japan
+Number of Participants: 99 university students from ASEAN countries and Timor-Leste (9 students
+from each country)
+Language: English
+Contents:
+(1) Lectures on Japanese politics, economy, society, history, culture, foreign policy, etc., related
+to the program theme or specific area.
+(2) Site visits to educational and research institutions related to the program theme or specific
+area, cutting-edge technology, traditional industries, exhibitions, cultural heritage, and local
+governments, etc. Exchange events such as workshops and exchanges of opinions with
+persons related to the above site visits.
+(3) Visits to various parts of Japan according to program theme and specific area, including
+homestays and hands-on events such as traditional arts and culture.
+(4) Dissemination of information on what participants learned in the program and the attrac
+ (6) Applicants need to have adequate English conversation skills to discuss and communicate with
+other participants and staffs.
+(7) Those who are 18 - 35 years old as of the program date. (high school students: 15 - 18,
+supervisors: under 40)
+(8) Applicants should be physically capable of keeping up with a busy program schedule requiring
+extensive walking each day.
+(9) The following applicants are given priority (excluding the applicant falling under (2)(3)(4)(5)
+above).
+- Those who have been involved in study, research or activities related to Japan or Japanese
+language/culture for over a year.
+- Those who have been involved in business related to Japan or Japanese products/services for
+over a year.
+(10)Applicants for the position of supervisor or group leader should have leadership abilities and be
+cooperative and capable of instructing the participants properly to ensure the smooth operation
+of the program (See Annex 1 for the roles of supervisors and group leaders).
+(11)Applicants must follow the measures for prevention of infectious disease in Japan.
+*Please see the Annex3 “Letter of Understanding” for the details.
+(12)Applicants from Cambodia, Indonesia, Lao PDR, Myanmar, the Philippines, Viet Nam and TimorLeste should submit the VISA application form. JICE will support to obtain their Visa by
+providing the necessary documents to the Embassy of Japan in each country. Please note that
+the latest border control policies will be applied to your Japan trip.
+(13)Applicants must commit to sharing and disseminating their experiences of the program and
+information on Japan through social media, etc.
+(14)Applicants must have a sufficient internet condition to have access to the online pre-exchange
+program.
+(15)Applicants needs to bring mobile phone and PC to Japan.
+(16) Passport must be valid for at least 6 months from the date of return to your country.
+4. Mandatory Assignments for all Participants
+JENESYS is promoted and funded by the Japanese government. Please promote Japan as an attractive
+destination for travel, study and work and serve as bridges between the countries.
+(1) Share Experiences
+Participants are required to share (1) what they learned about the program theme, (2) their experiences and
+discoveries in Japan and promote (1) understanding of Japan regarding program themes for the youth of their
+country, (2) Japan as an attractive destination for travel, study or work within three months of the program.
+They can share their experiences by posting on Facebook, Twitter, Instagram, You Tube or other social media
+during and after the program, contributing to PR magazines, holding a briefing session at the
+school/organization, etc.
+(2) Make Action Plans and Report Implementation
+Participants are required to make action plans in line with the program theme or their specialties after the
+completion of the whole program (pre-exchange program and face-to-face exchange program) on how to share
+their experiences and report their implementation to JICE. Make a creative action plan such as create Japanese
+language learning materials, hold alumni events, holding workshops on program themes by youth from Japan
+and ASEAN Member States, holding events in collaboration with visiting Japanese companies, introduction of
+attractions of the local town in Japan, etc. Participants will wrap up their findings and will present action
+plans in the reporting session. Within three months of
+the program, they will be requested to send an After Action Report on their implementation of the action
+plans.
+(3) Complete Questionnaires
+Participants are required to complete a questionnaire at the end of the program. They will be required three
+months thereafter to complete an online questionnaire, which will be sent to their email addresses.
+5. Requirements for participation
+(1) Passport copy
+Applicants must submit a copy of the photo page of their passport (color or black and white). The
+copy should be clear, complete and large enough to find everything on the page legible. Those who
+will apply for a new passport must submit its copy by no later than the date below

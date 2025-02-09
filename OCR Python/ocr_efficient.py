@@ -1,3 +1,5 @@
+##ဒါက အလုပ်လုပ်တဲ့ Code 
+
 import cv2
 from PIL import Image
 import pytesseract

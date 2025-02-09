@@ -1,3 +1,5 @@
+### ကောင်းကောင်း အလုပ်မလုပ်သေးဘူး ဖြစ်နေတယ်  ဒါက စိတ်ညစ်တာပဲ
+
 import customtkinter as ctk
 import google.generativeai as genai
 import speech_recognition as sr
@@ -14,6 +16,7 @@ class ChatbotApp:
         genai.configure(api_key=api_key)
         self.translator = Translator()  # Initialize translator
         self.pdf_text = self.load_text(text_file_path)  # Load PDF text
+        self.last_response = ""  # Store the last chatbot response
         self.setup_gui()  # Initialize GUI
 
     # Load extracted text from file
@@ -124,10 +127,20 @@ class ChatbotApp:
             self.chat_display.insert("end", f"🤖 Chatbot: {response_final}\n\n", "bot")
             self.chat_display.yview("end")
 
-            # Speak the response in the detected language
-            self.speak(response_final)
+            # Store the last response
+            self.last_response = response_final
+
+            # Add a "Speak Response" button after the chatbot's response
+            speak_button = ctk.CTkButton(self.chat_display, text="🔊 Speak Response", command=self.speak_last_response, font=("Arial", 12), corner_radius=5)
+            self.chat_display.window_create("end", window=speak_button)
+            self.chat_display.insert("end", "\n\n")  # Add some space after the button
 
         Thread(target=generate_response).start()
+
+    # Function to speak the last response
+    def speak_last_response(self):
+        if self.last_response:
+            self.speak(self.last_response)
 
     # Function to handle voice input
     def voice_input(self):
