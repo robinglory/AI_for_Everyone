@@ -1,4 +1,4 @@
-##Parsing Mediapipe Pose, Face and Hand LandMarks
+##Parsing Mediapipe Pose, Face and Hand LandMarks, facemesh also!
 
 
 import cv2
@@ -7,9 +7,52 @@ print(cv2.__version__)
 
 class mpFaceMesh:
     import mediapipe as mp
-    def __init__(self,still=False,max_num_faces = 3,tol1 =.5, tol2 = .5, drawMesh = True):
-        self.myFaceMesh = self.mp.solutions.face_mesh.FaceMesh(still,max_num_faces,tol1,tol2)
+    def __init__(self, still=False, max_num_faces=3, min_detection_confidence=0.5, min_tracking_confidence=0.5, drawMesh=True):
+        self.myFaceMesh = self.mp.solutions.face_mesh.FaceMesh(
+            static_image_mode=still,
+            max_num_faces=max_num_faces,
+            refine_landmarks=False,  # This should be a bool (not 0.5)
+            min_detection_confidence=min_detection_confidence,
+            min_tracking_confidence=min_tracking_confidence
+        )
         self.mpDraw = self.mp.solutions.drawing_utils
+        self.draw = drawMesh
+    # def Marks(self,frame):
+    #     global width
+    #     global height
+    #     frameRGB = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
+    #     results = self.myFaceMesh.process(frameRGB)
+    #     facesMeshLandmarks = []
+    #     if results.multi_face_landmarks != None:
+    #         for faceMesh in results.multi_face_landmarks:
+    #             faceMeshLandmarks = []
+    #             for lm in faceMesh.landmark:
+    #                 loc = (int(lm.x*width),int(lm.y*height))
+    #                 faceMeshLandmarks.append(loc)
+    #             facesMeshLandmarks.append(faceMeshLandmarks)
+    #             if self.draw == True:
+    #                 self.myDraw.draw_landmarks(frame,faceMesh)
+    def Marks(self, frame):
+        global width, height
+        frameRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        results = self.myFaceMesh.process(frameRGB)
+
+        facesMeshLandmarks = []  # ✅ Initialize this list properly before using it
+
+        if results.multi_face_landmarks:  # Check if any face mesh landmarks are detected
+            for faceMesh in results.multi_face_landmarks:
+                faceMeshLandmarks = []  # Store landmarks for one face
+                for lm in faceMesh.landmark:
+                    loc = (int(lm.x * width), int(lm.y * height))  # Convert to pixel coordinates
+                    faceMeshLandmarks.append(loc)
+                facesMeshLandmarks.append(faceMeshLandmarks)  # ✅ Append the detected face landmarks
+
+                if self.draw:
+                    self.mpDraw.draw_landmarks(frame, faceMesh)  # ✅ Corrected "self.myDraw" to "self.mpDraw"
+
+        return facesMeshLandmarks  # ✅ Return the list correctly
+
+
 class mpFace:
     import mediapipe as mp
     def __init__(self):
@@ -26,6 +69,7 @@ class mpFace:
                 bottomRight = (int((bBox.xmin+bBox.width) * width ),int((bBox.ymin+bBox.height)* height))
                 faceBoundBoxs.append((topLeft,bottomRight))
         return faceBoundBoxs
+
 
 class mpPose:
     import mediapipe as mp
@@ -85,9 +129,29 @@ cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
 findHands=mpHands()
 findFace = mpFace()
 findPose = mpPose()
+findMesh = mpFaceMesh(drawMesh=False)
 
 font = cv2.FONT_HERSHEY_SCRIPT_COMPLEX
 fontColor = (0,0,255)
+fontSize = .5
+fontThick = 1
+
+lowerLimit = 0
+upperLimit = 468
+
+def setLower(value):
+    global lowerLimit
+    lowerLimit = value
+def setHigher(value):
+    global upperLimit
+    upperLimit = value
+
+cv2.namedWindow("TrackBars")
+cv2.moveWindow("TrackBars",width+50,0)
+cv2.resizeWindow("TrackBars",400,150)
+
+cv2.createTrackbar("LowerLimit","TrackBars",0,468,setLower)
+cv2.createTrackbar("UpperLimit","TrackBars",468,468,setHigher)
 while True:
     ignore,  frame = cam.read()
     frame=cv2.resize(frame,(width,height))
@@ -95,6 +159,7 @@ while True:
     handLM,handsType = findHands.Marks(frame)
     faceLoc = findFace.Marks(frame)
     poseLM = findPose.Marks(frame)
+    facesMeshLM = findMesh.Marks(frame)
 
     if poseLM != None:
         for ind in [13,14,15,16]:
@@ -110,6 +175,12 @@ while True:
         if handType == "Left":
             lbl = "Left Hand"
             cv2.putText(frame,lbl,hand[8],font,2,fontColor,2)
+    for faceMeshLM in facesMeshLM:
+        cnt = 0
+        for lm in faceMeshLM:
+            if cnt >= lowerLimit and cnt <= upperLimit:
+                cv2.putText(frame,str(cnt),lm,font,fontSize,fontColor,fontThick)
+            cnt = cnt+1
 
     cv2.imshow('my WEBcam', frame)
     cv2.moveWindow('my WEBcam',0,0)
