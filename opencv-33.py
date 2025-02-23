@@ -43,6 +43,8 @@ cam.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
 
 findHands = mpHands()
 
+
+
 while True:
     ret, frame = cam.read()
     if not ret:
